@@ -3,7 +3,9 @@ const User = require("../models/User.model");
 
 async function genereteProfile(req, res) {
   try {
-    const usersResponse = await axios.get(`${process.env.URL_MICROSERVICES}/user`);
+    const usersResponse = await axios.get(
+      `${process.env.URL_MICROSERVICES}/user`
+    );
 
     const lastProfileData = usersResponse.data[usersResponse.data.length - 1];
 
@@ -14,10 +16,14 @@ async function genereteProfile(req, res) {
       organization: "TuOrganizacion",
     });
     await newUser.save();
-
   } catch (error) {
-    console.error("Error saving last profile data to local database:", error.message);
-    return res.status(500).json({ error: "Error saving last profile data to local database" });
+    console.error(
+      "Error saving last profile data to local database:",
+      error.message
+    );
+    return res
+      .status(500)
+      .json({ error: "Error saving last profile data to local database" });
   }
 }
 
