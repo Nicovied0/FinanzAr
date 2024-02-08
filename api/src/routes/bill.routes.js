@@ -2,15 +2,17 @@ const express = require("express");
 const router = express.Router();
 
 const {
-  createOrganization,
-  getAllOrganizations,
-  deleteOrganizationById,
-  getOrganizationById,
-} = require("../controller/organization.controller");
+  getAllBills,
+  getBillById,
+  createBill,
+  deleteBillById,
+  updateBillById,
+} = require("../controller/bill.controller");
 
-router.post("/", createOrganization);
-router.get("/", getAllOrganizations);
-router.post("/:id", getOrganizationById);
-router.delete("/", deleteOrganizationById);
+router.get("/", getAllBills);
+router.get("/:id", getBillById);
+router.post("/", createBill);
+router.put("/:id", updateBillById);
+router.delete("/", deleteBillById);
 
 module.exports = router;
