@@ -48,4 +48,27 @@ async function loginUser(req, res) {
   }
 }
 
-module.exports = { registerUser, loginUser };
+async function getProfile(req, res) {
+  try {
+    const token = req.headers.token;
+    if (!token) {
+      return res.status(401).json({ message: "Token not provided" });
+    }
+
+    const config = {
+      headers: { token: `${token}` },
+    };
+
+    const response = await axios.get(
+      `${process.env.URL_MICROSERVICES}/auth/profile`,
+      config
+    );
+
+    return res.status(response.status).json(response.data);
+  } catch (error) {
+    console.error("Error getting user profile:", error.message);
+    return res.status(500).json({ error: "Error getting user profile" });
+  }
+}
+
+module.exports = { registerUser, loginUser, getProfile };
