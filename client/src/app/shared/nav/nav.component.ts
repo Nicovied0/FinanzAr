@@ -19,13 +19,17 @@ export class NavComponent {
     this.noShowBurger();
   }
 
-  goVehicles() {
-    this.router.navigate(['/vehicles']);
+  goAboutUs() {
+    this.router.navigate(['/aboutUs']);
     this.noShowBurger();
   }
 
-  goContact() {
-    this.router.navigate(['/contact']);
+  goPrices(){
+    this.router.navigate(['/prices']);
+    this.noShowBurger();
+  }
+  goSupport() {
+    this.router.navigate(['/support']);
     this.noShowBurger();
   }
 

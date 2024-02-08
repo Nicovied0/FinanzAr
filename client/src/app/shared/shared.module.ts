@@ -14,6 +14,9 @@ import { LoaderComponent } from './loader/loader.component';
   ],
   imports: [
     CommonModule,
+
+  ],
+  exports:[
     NavComponent, 
     FooterComponent, 
     LoaderComponent
