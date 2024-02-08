@@ -1,0 +1,15 @@
+<div class="nav">
+  <h1 class="nav__icon" (click)="goHome()">AutoMarket</h1>
+  <div class="nav__links" [ngClass]="{ active: active }">
+    <h2 class="nav__links-comunidad" (click)="goHome()" *ngIf="active">home</h2>
+
+    <h2 class="nav__links-nosotros" (click)="goVehicles()">vehiculos</h2>
+    <h2 class="nav__links-contacto" (click)="goContact()">Contacto</h2>
+    <h2 class="nav__links-contacto" (click)="goDashboard()">Profile</h2>
+  </div>
+  <div class="nav__burguer" (click)="showBurger()">
+    <div class="nav__burguer-line-1" [ngClass]="{ active: active }"></div>
+    <div class="nav__burguer-line-2" [ngClass]="{ active: active }"></div>
+    <div class="nav__burguer-line-3" [ngClass]="{ active: active }"></div>
+  </div>
+</div>
