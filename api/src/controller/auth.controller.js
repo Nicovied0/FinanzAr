@@ -1,4 +1,5 @@
 const axios = require("axios");
+const genereteProfile = require("../middlewares/genereteProfile");
 
 async function registerUser(req, res) {
   try {
@@ -18,6 +19,8 @@ async function registerUser(req, res) {
         password,
       }
     );
+
+    await genereteProfile(req, res);
 
     return res.status(response.status).json(response.data);
   } catch (error) {

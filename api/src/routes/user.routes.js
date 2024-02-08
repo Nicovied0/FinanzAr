@@ -4,7 +4,7 @@ const {
   registerUser,
   loginUser,
   getProfile,
-} = require("../controller/authController");
+} = require("../controller/auth.controller");
 
 router.post("/register", registerUser);
 router.post("/login", loginUser);

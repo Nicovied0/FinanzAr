@@ -9,14 +9,16 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  organization:{
-    type:String
+  userIdRegister: {
+    type: String,
+  },
+  organization: {
+    type: String,
   },
   createdAt: {
     type: Date,
     default: Date.now,
   },
-  
 });
 
 const User = mongoose.model("User", UserSchema);
