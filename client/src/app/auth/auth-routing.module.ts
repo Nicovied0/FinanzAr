@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeviewsComponent } from '../home/views/homeviews/homeviews.component';
+import { AuthviewComponent } from './views/authview/authview.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: HomeviewsComponent,
+    component: AuthviewComponent,
   },
 ];
 
