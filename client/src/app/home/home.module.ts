@@ -5,6 +5,7 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeviewsComponent } from './views/homeviews/homeviews.component';
 import { DetailsComponent } from './components/details/details.component';
 import { OptimizeComponent } from './components/optimize/optimize.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { OptimizeComponent } from './components/optimize/optimize.component';
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    HttpClientModule
   ]
 })
 export class HomeModule { }
