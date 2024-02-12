@@ -30,23 +30,36 @@
   font-weight: 400;
 }
 
+.button,.button2{
+  background-color: #489b0b;
+
+    border-radius: 8px;
+    margin-left: 10px;
+    padding: 12px 25px;
+    font-family: Inter, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    transition: background-color 0.2s ease-in-out;
+    text-decoration: none;
+    display: inline-block;
+    line-height: inherit;
+    border: none;
+    cursor: pointer;
+}
 .nav__links {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
 
-.nav__links-comunidad,
-.nav__links-business,
-.nav__links-nosotros,
-.nav__links-list,
-.nav__links-lenguaje,
-.nav__links-contacto,
-.nav__icon {
+
+.nav__links-list{
   margin: 0.5rem;
   cursor: pointer;
   font-size: larger;
 }
+
 
 .nav__links-comunidad:hover,
 .nav__links-business:hover,
@@ -60,6 +73,7 @@
 }
 .nav__icon {
   color: var(--shark-50);
+  cursor: pointer;
   font-size: 2rem;
 }
 .nav__burguer {
@@ -92,7 +106,9 @@
     margin: 4px 0;
     transition: all 450ms ease-in-out;
   }
-
+.nav__links-list.active{
+  display: none;
+}
   .nav__burguer-line-1.active {
     transform: translateY(8px) rotate(135deg);
   }

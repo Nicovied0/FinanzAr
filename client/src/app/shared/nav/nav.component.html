@@ -6,11 +6,11 @@
         Inicio
       </h2>
 
-      <h2 class="nav__links-nosotros" (click)="goPrices()">Precios</h2>
-      <h2 class="nav__links-nosotros" (click)="goAboutUs()">Sobre Nosotros</h2>
-      <h2 class="nav__links-contacto" (click)="goSupport()">Soporte</h2>
-      <h2 class="nav__links" (click)="goDashboard()">Loguearse</h2>
-      <h2 class="nav__links" (click)="goDashboard()">Registrarse</h2>
+      <h2 class="nav__links-list" (click)="goPrices()">Precios</h2>
+      <h2 class="nav__links-list" (click)="goAboutUs()">Sobre Nosotros</h2>
+      <h2 class="nav__links-list" (click)="goSupport()">Soporte</h2>
+      <h2 class="nav__links-list  " (click)="goDashboard() "  [ngClass]="{ active: active }">Loguearse</h2>
+      <h2 class="nav__links-list button2" (click)="goDashboard()"  [ngClass]="{ active: active }">Registrarse</h2>
     </div>
     <div class="nav__burguer" (click)="showBurger()">
       <div class="nav__burguer-line-1" [ngClass]="{ active: active }"></div>
