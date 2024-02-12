@@ -33,7 +33,7 @@ export class FormComponent {
     this.authService.login(email, password).subscribe(
       (response) => {
         console.log('Usuario registrado:', response);
-        this.router.navigate(['/dashboard/']);
+        this.router.navigate(['/app/']);
       },
       (error) => {
         console.error('Error al registrar usuario:', error);

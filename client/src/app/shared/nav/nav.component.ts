@@ -34,7 +34,7 @@ export class NavComponent {
   }
 
   goDashboard() {
-    this.router.navigate(['/dashboard']);
+    this.router.navigate(['/auth']);
     this.noShowBurger();
   }
 
