@@ -18,7 +18,7 @@ export class AppComponent {
       if (event instanceof NavigationEnd) {
         this.ruta = this.router.url;
 
-        if (this.ruta.includes('/dashboard')) {
+        if (this.ruta.includes('/app') || this.ruta.includes('/auth')) {
           this.showLoader = false;
         } else {
           this.showLoader = true;
