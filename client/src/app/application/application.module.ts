@@ -4,12 +4,16 @@ import { CommonModule } from '@angular/common';
 import { ApplicationRoutingModule } from './application-routing.module';
 import { AppviewComponent } from './views/appview/appview.component';
 import { NavComponent } from './components/nav/nav.component';
+import { ProfileviewComponent } from './views/profileview/profileview.component';
+import { EditprofileviewComponent } from './views/editprofileview/editprofileview.component';
 
 
 @NgModule({
   declarations: [
     AppviewComponent,
-    NavComponent
+    NavComponent,
+    ProfileviewComponent,
+    EditprofileviewComponent
   ],
   imports: [
     CommonModule,

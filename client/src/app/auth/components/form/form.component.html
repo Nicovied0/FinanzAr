@@ -28,11 +28,17 @@
         type="submit"
         [disabled]="loginForm.invalid"
         class="auth-form__button"
+        *ngIf="!loader"
       >
         Iniciar sesión
       </button>
+      <button class="auth-form__button" *ngIf="loader">
+        <div class="div">
+          <span class="loader"></span>
+        </div>
+      </button>
     </form>
-    <p class="auth-form__switch">
+    <p class="auth-form__switch" *ngIf="!loader">
       ¿No tienes una cuenta?
       <a (click)="toggleForm(false)" class="auth-form__link">Regístrate</a>
     </p>
@@ -87,11 +93,17 @@
           type="submit"
           [disabled]="registerForm.invalid"
           class="auth-form__button"
+          *ngIf="!loader"
         >
           Registrarse
         </button>
+        <button class="auth-form__button" *ngIf="loader">
+          <div class="div">
+            <span class="loader"></span>
+          </div>
+        </button>
       </form>
-      <p class="auth-form__switch">
+      <p class="auth-form__switch" *ngIf="!loader">
         ¿Ya tienes una cuenta?
         <a (click)="toggleForm(true)" class="auth-form__link">Iniciar sesión</a>
       </p>

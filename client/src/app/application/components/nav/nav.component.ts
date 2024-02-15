@@ -39,8 +39,8 @@ export class NavComponent {
   goProfileEdit() {
     this.router.navigate(['/app/editProfile'])
   }
-  goVehicles(){
-    this.router.navigate(['/app/vehicles'])
+  goInstitution(){
+    this.router.navigate(['/app/institution'])
   }
 
 

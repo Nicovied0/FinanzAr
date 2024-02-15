@@ -8,7 +8,7 @@ describe('AuthviewComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [AuthviewComponent]
+      declarations: [AuthviewComponent],
     });
     fixture = TestBed.createComponent(AuthviewComponent);
     component = fixture.componentInstance;
