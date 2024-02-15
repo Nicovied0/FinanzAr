@@ -1,7 +1,7 @@
 <div class="auth-container">
   <div *ngIf="showLogin; else registerForm" class="auth-form login-form">
     <h2 class="auth-form__title">Iniciar sesión</h2>
-    <form (ngSubmit)="login()" #loginForm="ngForm" class="auth-form__form">
+    <form (ngSubmit)="login()" class="auth-form__form">
       <div class="auth-form__group">
         <label for="loginEmail" class="auth-form__label">Email:</label>
         <input
@@ -24,12 +24,7 @@
           class="auth-form__input"
         />
       </div>
-      <button
-        type="submit"
-        [disabled]="loginForm.invalid"
-        class="auth-form__button"
-        *ngIf="!loader"
-      >
+      <button type="submit" class="auth-form__button" *ngIf="!loader">
         Iniciar sesión
       </button>
       <button class="auth-form__button" *ngIf="loader">
@@ -47,11 +42,7 @@
   <ng-template #registerForm>
     <div class="auth-form register-form">
       <h2 class="auth-form__title">Registrarse</h2>
-      <form
-        (ngSubmit)="registerUser()"
-        #registerForm="ngForm"
-        class="auth-form__form"
-      >
+      <form (ngSubmit)="registerUser()" class="auth-form__form">
         <div class="auth-form__group">
           <label for="registerUsername" class="auth-form__label"
             >Nombre de usuario:</label
@@ -89,12 +80,7 @@
             class="auth-form__input"
           />
         </div>
-        <button
-          type="submit"
-          [disabled]="registerForm.invalid"
-          class="auth-form__button"
-          *ngIf="!loader"
-        >
+        <button type="submit" class="auth-form__button" *ngIf="!loader">
           Registrarse
         </button>
         <button class="auth-form__button" *ngIf="loader">

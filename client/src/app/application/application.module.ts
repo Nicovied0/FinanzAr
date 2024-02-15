@@ -6,6 +6,7 @@ import { AppviewComponent } from './views/appview/appview.component';
 import { NavComponent } from './components/nav/nav.component';
 import { ProfileviewComponent } from './views/profileview/profileview.component';
 import { EditprofileviewComponent } from './views/editprofileview/editprofileview.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { EditprofileviewComponent } from './views/editprofileview/editprofilevie
   ],
   imports: [
     CommonModule,
-    ApplicationRoutingModule
+    ApplicationRoutingModule,
+    FormsModule
   ]
 })
 export class ApplicationModule { }
